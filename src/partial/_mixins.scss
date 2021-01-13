@@ -1,0 +1,18 @@
+@mixin clearList {
+  list-style: none;
+  li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin layover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  h4 {
+    
+  }
+}
