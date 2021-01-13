@@ -62,7 +62,7 @@
 #header_bot #header_logo {
   height: 48px;
   width: 100px;
-  background-image: url("../img/logo-default-slim.png");
+  background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -113,12 +113,12 @@ nav ul li a:hover {
   background-size: cover;
 }
 #main_top .flex .main_top_img .layover {
-  position: relative;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
 }
-#main_top .flex .main_top_img .layover .main_top_content {
+#main_top .flex .main_top_img .layover .content {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -173,14 +173,188 @@ nav ul li a:hover {
 }
 #main_bot .flex .main_bot_container {
   width: 440px;
-  margin: 15px;
-  border: 1px solid black;
+  margin: 45px 15px;
+}
+#main_bot .flex .main_bot_container h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+}
+#main_bot .flex .main_bot_container ul {
+  list-style: none;
+}
+#main_bot .flex .main_bot_container ul li {
+  border-bottom: 1px dotted #E2E2E2;
+  display: flex;
+  align-items: center;
+}
+#main_bot .flex .main_bot_container ul li:last-child {
+  border-bottom: none;
+}
+#main_bot .flex .main_bot_container ul li .main_bot_text {
+  height: 50px;
+  width: 50px;
+  margin: 20px 20px 20px 0;
+}
+#main_bot .flex .main_bot_container ul li h6 {
+  color: #212529;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+#main_bot .flex .main_bot_container ul li span {
+  color: #888888;
+  font-size: 12px;
+}
+
+#main_bot_img_1 {
+  background-image: url("../img/smallphoto1.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_2 {
+  background-image: url("../img/smallphoto2.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_3 {
+  background-image: url("../img/smallphoto3.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_4 {
+  background-image: url("../img/smallphoto4.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_5 {
+  background-image: url("../img/smallphoto5.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_6 {
+  background-image: url("../img/smallphoto6.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_7 {
+  background-image: url("../img/smallphoto7.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_8 {
+  background-image: url("../img/smallphoto8.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_9 {
+  background-image: url("../img/smallphoto9.jpg");
+  background-size: cover;
+}
+
+#main_bot_img_10 {
+  background-image: url("../img/smallphoto10.jpg");
+  background-size: cover;
+}
+
+#main_bot_img {
+  height: 187px;
+  width: 100%;
+  margin: 30px 0;
+  background-image: url("../img/smallphoto.jpg");
+  background-size: cover;
+}
+#main_bot_img .layover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+#main_bot_img .layover .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 20px;
+  color: white;
+}
+#main_bot_img .layover h4 {
+  display: inline-block;
+}
+#main_bot_img .layover h4 {
+  background-color: #0088CC;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+}
+#main_bot_img .layover h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.flex {
+  align-items: center;
+}
+.flex #main_bot_small_img {
+  height: 112px;
+  width: 112px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-image: url("../img/avatar.jpg");
+  background-size: cover;
+}
+.flex .main_bot_small_text {
+  width: calc(100% - 132px);
+}
+.flex .main_bot_small_text h3 {
+  margin-bottom: 10px;
+}
+.flex .main_bot_small_text span {
+  font-size: 14px;
 }
 
 #slider {
   height: 155px;
   padding: 50px 0;
   background-color: #0088CC;
+}
+#slider ul {
+  list-style: none;
+}
+#slider ul li {
+  display: inline-block;
+}
+#slider ul li a {
+  text-decoration: none;
+}
+#slider ul li {
+  height: 55px;
+  width: 185px;
+  margin: 0 16px;
+  text-align: center;
+  line-height: 55px;
+  background-color: #212529;
+}
+#slider ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+}
+#slider ul li:hover {
+  background-color: #212529CC;
+  cursor: pointer;
+}
+#slider ul li:first-child, #slider ul li:last-child {
+  background: none;
+  width: 10px;
+}
+#slider ul li:first-child, #slider ul li:last-child:hover {
+  background: none;
+  cursor: pointer;
 }
 
 #footer_top {

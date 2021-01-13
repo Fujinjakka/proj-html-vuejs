@@ -2,13 +2,25 @@
 $font: 'Arimo', sans-serif;
 
 // IMG
-$logo: url("../img/logo-default-slim.png");
+$logo: url("../img/logo.png");
 $main_top_img_1: url("../img/photo1.jpg");
 $main_top_img_2: url("../img/photo2.jpg");
 $main_top_img_3: url("../img/photo3.jpg");
 $main_top_img_4: url("../img/photo4.jpg");
 $main_top_img_5: url("../img/photo5.jpg");
 $main_top_img_6: url("../img/photo6.jpg");
+
+$main_bot_img_1: url("../img/smallphoto1.jpg");
+$main_bot_img_2: url("../img/smallphoto2.jpg");
+$main_bot_img_3: url("../img/smallphoto3.jpg");
+$main_bot_img_4: url("../img/smallphoto4.jpg");
+$main_bot_img_5: url("../img/smallphoto5.jpg");
+$main_bot_img_6: url("../img/smallphoto6.jpg");
+$main_bot_img_7: url("../img/smallphoto7.jpg");
+$main_bot_img_8: url("../img/smallphoto8.jpg");
+$main_bot_img_9: url("../img/smallphoto9.jpg");
+$main_bot_img_10: url("../img/smallphoto10.jpg");
+
 
 // HEADER
 $header_top_color: #0088CC;
@@ -22,6 +34,9 @@ $nav_color: #444444;
 // MAIN
 $main_top_color: #F7F7F7;
 $main_bot_color: white;
+$main_bot_border_color: #E2E2E2;
+$main_bot_text_color: #212529;
+$main_bot_text_color2: #888888;
 
 $slider_color: #0088CC;
 
