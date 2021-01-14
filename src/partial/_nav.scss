@@ -19,6 +19,9 @@ nav {
           color: $header_top_color;
         }
       }
+      &:last-child:hover {
+        cursor: pointer;
+      }
     }
   }
 }

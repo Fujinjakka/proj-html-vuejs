@@ -10,7 +10,20 @@
       margin: 10px;
       background-size: cover;
       .layover {
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
         @include layover;
+        .hidden_text {
+          display: none;
+        }
+        &:hover .hidden_text {
+          display: block;
+        }
+        .hidden_text {
+          color: #B7B7B7;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -38,39 +51,37 @@
 #main_bot {
   height: 538px;
   background-color: $main_bot_color;
-  .flex {
-    .main_bot_container {
-      width: 440px;
-      margin: 45px 15px;
-      h4 {
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 900;
-      }
-      ul {
-        list-style: none;
-        li {
-          border-bottom: 1px dotted $main_bot_border_color;
-          display: flex;
-          align-items: center;
-          &:last-child {
-            border-bottom: none;
-          }
-          .main_bot_text {
-            height: 50px;
-            width: 50px;
-            margin: 20px 20px 20px 0;
-          }
-          h6 {
-            color: $main_bot_text_color;
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: capitalize;
-          }
-          span {
-            color: $main_bot_text_color2;
-            font-size: 12px;
-          }
+  .main_bot_container {
+    width: 440px;
+    margin: 45px 15px;
+    h4 {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 900;
+    }
+    ul {
+      list-style: none;
+      li {
+        border-bottom: 1px dotted $main_bot_border_color;
+        display: flex;
+        align-items: center;
+        &:last-child {
+          border-bottom: none;
+        }
+        .main_bot_text {
+          height: 50px;
+          width: 50px;
+          margin: 20px 20px 20px 0;
+        }
+        h6 {
+          color: $main_bot_text_color;
+          font-size: 16px;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+        span {
+          color: $main_bot_text_color2;
+          font-size: 12px;
         }
       }
     }
@@ -117,12 +128,12 @@
   background-image: $main_bot_img_10;
   background-size: cover;
 }
- // REFACTORING IMPORTANTE !!!!!!!!!!
+
 #main_bot_img {
   height: 187px;
   width: 100%;
   margin: 30px 0;
-  background-image: url("../img/smallphoto.jpg");
+  background-image: $main_bot_img;
   background-size: cover;
   .layover {
     @include layover;
@@ -135,7 +146,7 @@
     width: 112px;
     margin-top: 20px;
     margin-right: 20px;
-    background-image: url("../img/avatar.jpg");
+    background-image: $main_bot_avatar;
     background-size: cover;
   }
   .main_bot_small_text {
@@ -161,7 +172,7 @@
       margin: 0 16px;
       text-align: center;
       line-height: 55px;
-      background-color: #212529;
+      background-color: $main_bot_text_color;
       a{
         color: white;
         text-transform: uppercase;
@@ -169,7 +180,7 @@
         font-weight: 900;
       }
     &:hover {
-      background-color: #212529CC;
+      background-color: $slider_color_hover;
       cursor: pointer;
     }
     &:first-child, &:last-child {
@@ -186,65 +197,211 @@
 
 #main_container {
   width: 70%;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-right: 10px;
-  .section_img {
-    height: 437px;
-  }
-  .flex {
-    align-items: flex-start;
-    margin-top: 20px;
-    .calendar {
-      width: 100px;
-      align-items: flex-start;
-      text-align: center;
-      padding: 0 20px;
-      #calendar_top {
-        color: black;
-        background-color: grey;
-        padding: 20px 0;
-      }
-      #calendar_bot {
-        color: grey;
-        background-color: black;
-      }
+  section {
+    margin-bottom: 60px;
+    border-bottom: 1px solid $section_text_border;
+    .section_img {
+      height: 437px;
     }
-    .section_text {
-      width: calc(100% - 100px);
-      border-bottom: 5px solid black;
-      margin-bottom: 70px;
-      span {
-        margin: 10px 0;
-        &:last-child {
+    .flex {
+      align-items: flex-start;
+      margin-top: 30px;
+      .calendar {
+        width: 60px;
+        align-items: flex-start;
+        text-align: center;
+        padding-right: 20px;
+        #calendar_top {
+          color: $calendar_top_text;
+          font-size: 15px;
+          font-weight: bolder;
+          background-color: $calendar_top_color;
+          padding: 20px 0;
+        }
+        #calendar_bot {
+          color: $calendar_top_color;
+          background-color: $calendar_top_text;
+          font-size: 12px;
+        }
+      }
+      .section_text {
+        width: calc(100% - 60px);
+        margin-bottom: 30px;
+        h1 {
+          margin-bottom: 20px;
+        }
+        p {
+          color: $section_text_color;
+          line-height: 25px;
+          text-align: justify;
+          text-justify: auto;
+          margin-bottom: 20px;
+        }
+        span {
+          i {
+            margin-right: 10px;
+          }
+          a {
+            margin-left: 5px;
+            text-decoration: none;
+            color: #0088CC;
+          }
+        }
+        #section_text_button {
           float: right;
-          border: 1px solid black;
-          border-radius: 3px;
+          text-decoration: none;
+          color: #777777;
+          border: 1px solid #D9D9D9;
+          border-radius: 5px;
+          padding: 5px;
+          text-transform: uppercase;
+          font-size: 12px;
+          &:hover {
+            background-color: #D6D6D6;
+          }
         }
       }
     }
+    #section_img_mix {
+      height: 700px;
+      flex-wrap: wrap;
+      .section_img_mix_all {
+        height: calc(100% / 2);
+        width: calc(100% / 3);
+      }
+    }
   }
 }
 
-
-
-
 #section_img_1 {
-  background-image: url("../img/bigphoto1.jpg");
+  background-image: $section_img_1;
+  background-size: cover;
+}
+#section_img_2 {
+  background-image: $section_img_2;
+  background-size: cover;
+}
+#section_img_3 {
+  background-image: $section_img_3;
+  background-size: cover;
+}
+#section_img_4 {
+  background-image: $section_img_4;
   background-size: cover;
 }
 
-#prova {
-  background-color: green;
-  color: orange;
+#section_img_mix_1 {
+  background-image: $section_img_mix_1;
+  background-size: cover;
+}
+#section_img_mix_2 {
+  background-image: $section_img_mix_2;
+  background-size: cover;
+}
+#section_img_mix_3 {
+  background-image: $section_img_mix_3;
+  background-size: cover;
+}
+#section_img_mix_4 {
+  background-image: $section_img_mix_4;
+  background-size: cover;
+}
+#section_img_mix_5 {
+  background-image: $section_img_mix_5;
+  background-size: cover;
+}
+#section_img_mix_6 {
+  background-image: $section_img_mix_5;
+  background-size: cover;
 }
 
 aside {
   width: 25%;
-  margin-top: 70px;
-  margin-left: 10px;
-  background-color: pink;
+  margin-top: 60px;
+  margin-left: 20px;
   align-self: flex-start;
+  h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #twitter_box {
+    margin: 20px 0;
+    .icon {
+      align-self: flex-start;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    span {
+      color: #888888;
+      font-size: 16px;
+    }
+    p {
+      color: #0088CC;
+      margin: 10px 0 30px;
+      font-size: 14px;
+    }
+  }
+  #aside_photo {
+    height: 220px;
+    width: 330px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    .aside_all_img {
+      height: calc(100% / 2);
+      width: calc(100% / 3);
+    }
+  }
+  #aside_category {
+    justify-content: space-around;
+    .aside_categories {
+      text-transform: uppercase;
+      background-color: black;
+      border-radius: 10px;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 3px;
+      margin-right: 5px;
+      margin-bottom: 50px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #0088CC;
+    border-left: 5px solid #EEEEEE;
+    padding: 10px;
+  }
 }
+
+#aside_img1 {
+  background-image: $aside_img_1;
+  background-size: cover;
+}
+#aside_img2 {
+  background-image: $aside_img_2;
+  background-size: cover;
+}
+#aside_img3 {
+  background-image: $aside_img_3;
+  background-size: cover;
+}
+#aside_img4 {
+  background-image: $aside_img_4;
+  background-size: cover;
+}
+#aside_img5 {
+  background-image: $aside_img_5;
+  background-size: cover;
+}
+#aside_img6 {
+  background-image: $aside_img_6;
+  background-size: cover;
+}
+
+
 .counter_container {
   width: 70%;
   position: relative;
