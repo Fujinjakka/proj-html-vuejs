@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700;900&display=swap" rel="stylesheet">
@@ -9,454 +10,444 @@
     <title>Blog</title>
   </head>
   <body>
+    <div id="vue_container">
+      <header>
+        <div id="header_top">
+          <div class="container">
+            <ul>
+              <li>Everything about Lifestyle, Travel and Gadgets!</li>
+              <li><a href="#">sign in</a></li>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">contact us</a></li>
+              <li><a href="#">buy now</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="header_bot">
+          <div class="container flex">
+            <div id="header_logo"></div>
+          </div>
+        </div>
+      </header>
 
-    <header>
-      <div id="header_top">
+      <nav>
         <div class="container">
-          <ul>
-            <li>Everything about Lifestyle, Travel and Gadgets!</li>
-            <li><a href="#">sign in</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">contact us</a></li>
-            <li><a href="#">buy now</a></li>
+          <ul id="nav_list">
+            <li><a href="#">home</a></li>
+            <li><a href="#">elements</a></li>
+            <li><a href="#">features</a></li>
+            <li><a href="#">pages</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">shop</a></li>
+            <li><i class="fas fa-search"></i></li>
           </ul>
         </div>
-      </div>
-      <div id="header_bot">
-        <div class="container flex">
-          <div id="header_logo"></div>
-        </div>
-      </div>
-    </header>
+      </nav>
 
-    <nav>
-      <div class="container">
-        <ul id="nav_list">
-          <li><a href="#">home</a></li>
-          <li><a href="#">elements</a></li>
-          <li><a href="#">features</a></li>
-          <li><a href="#">pages</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">shop</a></li>
-          <li><i class="fas fa-search"></i></li>
-        </ul>
-      </div>
-    </nav>
-
-    <main>
-      <div id="main_top">
-        <div class="container flex">
-          <div id="container_1" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>photography</h4>
-                <h2>how to take better concert picture in 30 seconds</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <main>
+        <div id="main_top">
+          <div class="container flex">
+            <div id="container_1" class="main_top_img" @mouseover="on1=true" @mouseleave="on1=false">
+              <div class="layover">
+                <div class="content">
+                  <h4>photography</h4>
+                  <h2>how to take better concert picture in 30 seconds</h2>
+                  <div v-show="on1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="container_2" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>gadgets</h4>
-                <h2>gadgets that make your smartphone even smarter</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div id="container_2" class="main_top_img" @mouseover="on2=true" @mouseleave="on2=false">
+              <div class="layover">
+                <div class="content">
+                  <h4>gadgets</h4>
+                  <h2>gadgets that make your smartphone even smarter</h2>
+                  <div v-show="on2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="container_3" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>travel</h4>
-                <h2>20 top-rated tourist attraction in manhattan</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div id="container_3" class="main_top_img"@mouseover="on3=true" @mouseleave="section_img_mix_3=false">
+              <div class="layover">
+                <div class="content">
+                  <h4>travel</h4>
+                  <h2>20 top-rated tourist attraction in manhattan</h2>
+                  <div v-show="on3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="container_4" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>lifestyle</h4>
-                <h2>the best way to ride a motorcycle</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div id="container_4" class="main_top_img" @mouseover="on4=true" @mouseleave="on4=false">
+              <div class="layover">
+                <div class="content">
+                  <h4>lifestyle</h4>
+                  <h2>the best way to ride a motorcycle</h2>
+                  <div v-show="on4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="container_5" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>travel</h4>
-                <h2>5 fun things to do at the beach</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div id="container_5" class="main_top_img" @mouseover="on5=true" @mouseleave="on5=false">
+              <div class="layover">
+                <div class="content">
+                  <h4>travel</h4>
+                  <h2>5 fun things to do at the beach</h2>
+                  <div v-show="on5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div id="container_6" class="main_top_img">
-            <div class="layover">
-              <div class="content">
-                <h4>recipes</h4>
-                <h2>amazingly fresh fruit and herbs drink for summer</h2>
-                <div class="hidden_text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="main_bot">
-        <div class="container flex">
-          <div class="main_bot_container">
-            <h4>popular post</h4>
-            <ul>
-              <li>
-                <div id="main_bot_img_1" class="main_bot_text"></div>
-                <div>
-                  <h6>simple ways to have a pretty face</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_2" class="main_bot_text"></div>
-                <div>
-                  <h6>ranking the greatest players in basketball</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_3" class="main_bot_text"></div>
-                <div>
-                  <h6>4 ways to look cool in glasses</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_4" class="main_bot_text"></div>
-                <div>
-                  <h6>top camper trailer towing tips</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_5" class="main_bot_text"></div>
-                <div>
-                  <h6>5 lovely walks in new york</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="main_bot_container">
-            <h4>popular post</h4>
-            <ul>
-              <li>
-                <div id="main_bot_img_6" class="main_bot_text"></div>
-                <div>
-                  <h6>main reasons to stop texting and driving</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_7" class="main_bot_text"></div>
-                <div>
-                  <h6>tips to help you quickly prepare your lunch</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_8" class="main_bot_text"></div>
-                <div>
-                  <h6>why should i buy a smartwatch?</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_9" class="main_bot_text"></div>
-                <div>
-                  <h6>the best augumented reality smartglasses</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-              <li>
-                <div id="main_bot_img_10" class="main_bot_text"></div>
-                <div>
-                  <h6>12 healthiest food to eat for breakfast</h6>
-                  <span>jennuary 12, 2019</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="main_bot_container">
-            <h4>featured post</h4>
-            <div id="main_bot_img">
+            <div id="container_6" class="main_top_img" @mouseover="on6=true" @mouseleave="on6=false">
               <div class="layover">
                 <div class="content">
                   <h4>recipes</h4>
-                  <h2>tips to help you quickly prepare your lunch</h2>
+                  <h2>amazingly fresh fruit and herbs drink for summer</h2>
+                  <div v-show="on6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <h4>featured author</h4>
-            <div class="flex">
-              <div id="main_bot_small_img"></div>
-              <div class="main_bot_small_text">
-                <h3>Jhon Doe</h5>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
 
-      <div id="slider">
-        <div class="container">
-          <ul class="flex">
-            <li><i class="fas fa-chevron-left"></i></li>
-            <li><a href="#">gadgets</a></li>
-            <li><a href="#">photography</a></li>
-            <li><a href="#">lifestyle</a></li>
-            <li><a href="#">fashion</a></li>
-            <li><a href="#">recipes</a></li>
-            <li><a href="#">travel</a></li>
-            <li><i class="fas fa-chevron-right"></i></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="container flex">
-        <div id="main_container">
-          <section>
-            <div id="section_img_1" class="section_img"></div>
-            <div class="flex">
-              <div class="calendar">
-                <div id="calendar_top">12</div>
-                <div id="calendar_bot">JAN</div>
-              </div>
-              <div class="section_text">
-                <h1>How to Make Friends as a Grown-Up</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
-                <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
-                <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
-                <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
-                <a id="section_text_button" href="#">Read More</a>
-              </div>
+        <div id="main_bot">
+          <div class="container flex">
+            <div class="main_bot_container">
+              <h4>popular post</h4>
+              <ul>
+                <li>
+                  <div id="main_bot_img_1" class="main_bot_text"></div>
+                  <div>
+                    <h6>simple ways to have a pretty face</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_2" class="main_bot_text"></div>
+                  <div>
+                    <h6>ranking the greatest players in basketball</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_3" class="main_bot_text"></div>
+                  <div>
+                    <h6>4 ways to look cool in glasses</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_4" class="main_bot_text"></div>
+                  <div>
+                    <h6>top camper trailer towing tips</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_5" class="main_bot_text"></div>
+                  <div>
+                    <h6>5 lovely walks in new york</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </section>
-          <section>
-            <div id="section_img_2" class="section_img"></div>
-            <div class="flex">
-              <div class="calendar">
-                <div id="calendar_top">12</div>
-                <div id="calendar_bot">JAN</div>
-              </div>
-              <div class="section_text">
-                <h1>Simple Ways to Have a Pretty Face</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
-                <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
-                <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
-                <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
-                <a id="section_text_button" href="#">Read More</a>
-              </div>
+            <div class="main_bot_container">
+              <h4>popular post</h4>
+              <ul>
+                <li>
+                  <div id="main_bot_img_6" class="main_bot_text"></div>
+                  <div>
+                    <h6>main reasons to stop texting and driving</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_7" class="main_bot_text"></div>
+                  <div>
+                    <h6>tips to help you quickly prepare your lunch</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_8" class="main_bot_text"></div>
+                  <div>
+                    <h6>why should i buy a smartwatch?</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_9" class="main_bot_text"></div>
+                  <div>
+                    <h6>the best augumented reality smartglasses</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+                <li>
+                  <div id="main_bot_img_10" class="main_bot_text"></div>
+                  <div>
+                    <h6>12 healthiest food to eat for breakfast</h6>
+                    <span>jennuary 12, 2019</span>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </section>
-          <section>
-            <div id="section_img_3" class="section_img"></div>
-            <div class="flex">
-              <div class="calendar">
-                <div id="calendar_top">12</div>
-                <div id="calendar_bot">JAN</div>
+            <div class="main_bot_container">
+              <h4>featured post</h4>
+              <div id="main_bot_img">
+                <div class="layover">
+                  <div class="content">
+                    <h4>recipes</h4>
+                    <h2>tips to help you quickly prepare your lunch</h2>
+                  </div>
+                </div>
               </div>
-              <div class="section_text">
-                <h1>Ranking the greatest players in basketball</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
-                <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
-                <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
-                <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
-                <a id="section_text_button" href="#">Read More</a>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div id="section_img_4" class="section_img"></div>
-            <div class="flex">
-              <div class="calendar">
-                <div id="calendar_top">12</div>
-                <div id="calendar_bot">JAN</div>
-              </div>
-              <div class="section_text">
-                <h1>Top Camper Trailer Towing Tips</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
-                <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
-                <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
-                <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
-                <a id="section_text_button" href="#">Read More</a>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div id="section_img_mix" class="flex">
-              <div id="section_img_mix_1" class="section_img_mix_all"></div>
-              <div id="section_img_mix_2" class="section_img_mix_all"></div>
-              <div id="section_img_mix_3" class="section_img_mix_all"></div>
-              <div id="section_img_mix_4" class="section_img_mix_all"></div>
-              <div id="section_img_mix_5" class="section_img_mix_all"></div>
-              <div id="section_img_mix_6" class="section_img_mix_all"></div>
-            </div>
-            <div class="flex">
-              <div class="calendar">
-                <div id="calendar_top">8</div>
-                <div id="calendar_bot">JAN</div>
-              </div>
-              <div class="section_text">
-                <h1>10 Best Travel Tips After 5 Years Traveling The World</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
-                <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
-                <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
-                <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
-                <a id="section_text_button" href="#">Read More</a>
-              </div>
-            </div>
-          </section>
-        </div>
-        <aside>
-          <h3>latest from twitter</h3>
-          <div id="twitter_box">
-            <div class="flex">
-              <div class="icon"><i class="fab fa-twitter"></i></div>
-              <div>
-                <span>if u have any suggestions for the next updates, let us know.</span>
-                <p>01:05 PM Sep 18th</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="icon"><i class="fab fa-twitter"></i></div>
-              <div>
-                <span>if u have any suggestions for the next updates, let us know.</span>
-                <p>01:05 PM Sep 18th</p>
+              <h4>featured author</h4>
+              <div class="flex">
+                <div id="main_bot_small_img"></div>
+                <div class="main_bot_small_text">
+                  <h3>Jhon Doe</h5>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <h3>photo from instagram</h3>
-          <div id="aside_photo" class="flex">
-            <div id="aside_img1" class="aside_all_img"></div>
-            <div id="aside_img2" class="aside_all_img"></div>
-            <div id="aside_img3" class="aside_all_img"></div>
-            <div id="aside_img4" class="aside_all_img"></div>
-            <div id="aside_img5" class="aside_all_img"></div>
-            <div id="aside_img6" class="aside_all_img"></div>
-          </div>
-          <h3>tags</h3>
-          <div id="aside_category" class="flex">
-            <div class="aside_categories">design</div>
-            <div class="aside_categories">brand</div>
-            <div class="aside_categories">video</div>
-            <div class="aside_categories">business</div>
-            <div class="aside_categories">travel</div>
-          </div>
-          <h3>find us on facebook</h3>
-          <a href="#">Okler Themes</a>
-        </aside>
-      </div>
 
-      <div class="container">
-        <div class="counter_container">
-          <div id="counter" class="flex">
-            <div class="counter_botton"><i class="fas fa-chevron-left"></i></div>
-            <div class="counter_botton">1</div>
-            <div class="counter_botton">2</div>
-            <div class="counter_botton">3</div>
-            <div class="counter_botton"><i class="fas fa-chevron-right"></i></div>
+          <div id="slider">
+            <div class="container">
+              <ul class="flex">
+                <li><i class="fas fa-chevron-left"></i></li>
+                <!-- <li v-for="category in categories"><a href="#">{{category.name}}</a></li> -->
+                <li><a href="#">gadgets</a></li>
+                <li><a href="#">photography</a></li>
+                <li><a href="#">lifestyle</a></li>
+                <li><a href="#">fashion</a></li>
+                <li><a href="#">recipes</a></li>
+                <li><a href="#">travel</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
 
-    <footer>
-      <div id="footer_top">
-        <div id="footer_container" class="container flex">
-          <div id="footer_top_left">
-            <h3>about the blog</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <h3>view more<i class="fas fa-chevron-right"></i></h3>
+          <div class="container flex">
+            <div id="main_container">
+              <section>
+                <div id="section_img_1" class="section_img"></div>
+                <div class="flex">
+                  <div class="calendar">
+                    <div id="calendar_top">12</div>
+                    <div id="calendar_bot">JAN</div>
+                  </div>
+                  <div class="section_text">
+                    <h1>How to Make Friends as a Grown-Up</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
+                    <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
+                    <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
+                    <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
+                    <a id="section_text_button" href="#">Read More</a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="section_img_2" class="section_img"></div>
+                <div class="flex">
+                  <div class="calendar">
+                    <div id="calendar_top">12</div>
+                    <div id="calendar_bot">JAN</div>
+                  </div>
+                  <div class="section_text">
+                    <h1>Simple Ways to Have a Pretty Face</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
+                    <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
+                    <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
+                    <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
+                    <a id="section_text_button" href="#">Read More</a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="section_img_3" class="section_img"></div>
+                <div class="flex">
+                  <div class="calendar">
+                    <div id="calendar_top">12</div>
+                    <div id="calendar_bot">JAN</div>
+                  </div>
+                  <div class="section_text">
+                    <h1>Ranking the greatest players in basketball</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
+                    <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
+                    <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
+                    <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
+                    <a id="section_text_button" href="#">Read More</a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="section_img_4" class="section_img"></div>
+                <div class="flex">
+                  <div class="calendar">
+                    <div id="calendar_top">12</div>
+                    <div id="calendar_bot">JAN</div>
+                  </div>
+                  <div class="section_text">
+                    <h1>Top Camper Trailer Towing Tips</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
+                    <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
+                    <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
+                    <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
+                    <a id="section_text_button" href="#">Read More</a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="section_img_mix" class="flex">
+                  <div id="section_img_mix_1" class="section_img_mix_all"></div>
+                  <div id="section_img_mix_2" class="section_img_mix_all"></div>
+                  <div id="section_img_mix_3" class="section_img_mix_all"></div>
+                  <div id="section_img_mix_4" class="section_img_mix_all"></div>
+                  <div id="section_img_mix_5" class="section_img_mix_all"></div>
+                  <div id="section_img_mix_6" class="section_img_mix_all"></div>
+                </div>
+                <div class="flex">
+                  <div class="calendar">
+                    <div id="calendar_top">8</div>
+                    <div id="calendar_bot">JAN</div>
+                  </div>
+                  <div class="section_text">
+                    <h1>10 Best Travel Tips After 5 Years Traveling The World</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[...]</p>
+                    <span><i class="far fa-user"></i>by<a href="#">Jhon Doe</a></span>
+                    <span><i class="far fa-folder"></i><a href="#">lifestyle, Travel</a></span>
+                    <span><i class="far fa-comments"></i><a href="#">12 Comments</a></span>
+                    <a id="section_text_button" href="#">Read More</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <aside>
+              <h3>latest from twitter</h3>
+              <div id="twitter_box">
+                <div class="flex">
+                  <div class="icon"><i class="fab fa-twitter"></i></div>
+                  <div>
+                    <span>if u have any suggestions for the next updates, let us know.</span>
+                    <p>01:05 PM Sep 18th</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="icon"><i class="fab fa-twitter"></i></div>
+                  <div>
+                    <span>if u have any suggestions for the next updates, let us know.</span>
+                    <p>01:05 PM Sep 18th</p>
+                  </div>
+                </div>
+              </div>
+              <h3>photo from instagram</h3>
+              <div id="aside_photo" class="flex">
+                <div id="aside_img1" class="aside_all_img"></div>
+                <div id="aside_img2" class="aside_all_img"></div>
+                <div id="aside_img3" class="aside_all_img"></div>
+                <div id="aside_img4" class="aside_all_img"></div>
+                <div id="aside_img5" class="aside_all_img"></div>
+                <div id="aside_img6" class="aside_all_img"></div>
+              </div>
+              <h3>tags</h3>
+              <div id="aside_category" class="flex">
+                <div class="aside_categories">design</div>
+                <div class="aside_categories">brand</div>
+                <div class="aside_categories">video</div>
+                <div class="aside_categories">business</div>
+                <div class="aside_categories">travel</div>
+              </div>
+              <h3>find us on facebook</h3>
+              <a href="#">Okler Themes</a>
+            </aside>
           </div>
-          <div class="footer_top_center_left">
-            <h3>recent post</h3>
-            <div class="flex">
-              <div id="footer_img_1" class="footer_img"></div>
-              <div id="footer_text">
-                <p>Lorem ipsum dolor sit, consectetur adipisicing elit.</p>
-                <p>12:53 AM Dec 19th</p>
+
+          <div class="container">
+            <div class="counter_container">
+              <div id="counter" class="flex">
+                <div class="counter_botton"><i class="fas fa-chevron-left"></i></div>
+                <div class="counter_botton">1</div>
+                <div class="counter_botton">2</div>
+                <div class="counter_botton">3</div>
+                <div class="counter_botton"><i class="fas fa-chevron-right"></i></div>
               </div>
             </div>
-            <div class="flex">
-              <div id="footer_img_2" class="footer_img"></div>
-              <div id="footer_text">
-                <p>Lorem ipsum dolor sit, consectetur adipisicing elit.</p>
-                <p>12:53 AM Dec 19th</p>
+          </div>
+        </main>
+
+        <footer>
+          <div id="footer_top">
+            <div id="footer_container" class="container flex">
+              <div id="footer_top_left">
+                <h3>about the blog</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>view more<i class="fas fa-chevron-right"></i></h3>
+              </div>
+              <div class="footer_top_center_left">
+                <h3>recent post</h3>
+                <div class="flex">
+                  <div id="footer_img_1" class="footer_img"></div>
+                  <div id="footer_text">
+                    <p>Lorem ipsum dolor sit, consectetur adipisicing elit.</p>
+                    <p>12:53 AM Dec 19th</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div id="footer_img_2" class="footer_img"></div>
+                  <div id="footer_text">
+                    <p>Lorem ipsum dolor sit, consectetur adipisicing elit.</p>
+                    <p>12:53 AM Dec 19th</p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer_top_center_right">
+                <h3>recent comments</h3>
+                <div class="flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <p><b>Jhon Doe</b> commented on <span>Lorem ipsum dolor sit amet</span></p>
+                </div>
+                <p class="date">12:55 AM Dec 19th</p>
+                <div class="flex">
+                  <i class="fas fa-chevron-right"></i>
+                  <p><b>Jhon Doe</b> commented on <span>Lorem ipsum dolor sit amet</span></p>
+                </div>
+                <p class="date">12:55 AM Dec 19th</p>
+              </div>
+              <div id="footer_top_right">
+                <h3>categories</h3>
+                <div class="footer_category flex">
+                  <a v-for="category in categories" class="categories" :href="category.url">{{category.name}}</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="footer_top_center_right">
-            <h3>recent comments</h3>
-            <div class="flex">
-              <i class="fas fa-chevron-right"></i>
-              <p><b>Jhon Doe</b> commented on <span>Lorem ipsum dolor sit amet</span></p>
-            </div>
-            <p class="date">12:55 AM Dec 19th</p>
-            <div class="flex">
-              <i class="fas fa-chevron-right"></i>
-              <p><b>Jhon Doe</b> commented on <span>Lorem ipsum dolor sit amet</span></p>
-            </div>
-            <p class="date">12:55 AM Dec 19th</p>
-          </div>
-          <div id="footer_top_right">
-            <h3>categories</h3>
-            <div class="footer_category flex">
-              <div class="categories">gadgets</div>
-              <div class="categories">photography</div>
-              <div class="categories">lifestyle</div>
-              <div class="categories">fashion</div>
-              <div class="categories">recipes</div>
-              <div class="categories">travel</div>
-              <div class="categories">business</div>
-              <div class="categories">architecture</div>
-              <div class="categories">reviews</div>
-              <div class="categories">sports</div>
-              <div class="categories">video</div>
-              <div class="categories">technology</div>
-              <div class="categories">design</div>
+
+          <div id="footer_bot">
+            <div class="container flex">
+              <div id="footer_logo"></div>
+              <div><i class="far fa-copyright"></i>Copyright 2020. All Right Reserved.</div>
+              <ul>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>FAQ's</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Sitemap</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div id="footer_bot">
-        <div class="container flex">
-          <div id="footer_logo"></div>
-          <div><i class="far fa-copyright"></i>Copyright 2020. All Right Reserved.</div>
-          <ul>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>FAQ's</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Sitemap</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-
-    </footer>
+        </footer>
+    </div>
 
 
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

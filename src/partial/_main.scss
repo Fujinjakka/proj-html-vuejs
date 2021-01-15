@@ -14,12 +14,12 @@
           background-color: rgba(0, 0, 0, 0.7);
         }
         @include layover;
-        .hidden_text {
-          display: none;
-        }
-        &:hover .hidden_text {
-          display: block;
-        }
+        // .hidden_text {
+        //   display: none;
+        // }
+        // &:hover .hidden_text {
+        //   display: block;
+        // }
         .hidden_text {
           color: #B7B7B7;
           font-size: 12px;

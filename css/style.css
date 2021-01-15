@@ -18,6 +18,14 @@
   display: flex;
 }
 
+.hidden_text {
+  display: none;
+}
+
+.show_text {
+  display: block;
+}
+
 #header_top {
   height: 52px;
   background-color: #0088CC;
@@ -139,12 +147,6 @@ nav ul li:last-child:hover {
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 900;
-}
-#main_top .flex .main_top_img .layover .hidden_text {
-  display: none;
-}
-#main_top .flex .main_top_img .layover:hover .hidden_text {
-  display: block;
 }
 #main_top .flex .main_top_img .layover .hidden_text {
   color: #B7B7B7;
@@ -692,6 +694,7 @@ aside a {
   padding: 7px;
   margin: 5px 5px;
   line-height: 10px;
+  text-decoration: none;
 }
 
 #footer_img_1 {
