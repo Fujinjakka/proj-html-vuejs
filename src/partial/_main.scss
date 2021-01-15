@@ -404,35 +404,22 @@ aside {
 
 .counter_container {
   width: 70%;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
   position: relative;
   #counter {
     position: absolute;
     right: 0;
     bottom: 0;
+    .counter_botton {
+      color: #0088CC;
+      border: 1px solid #EEEEEE;
+      padding: 10px;
+      &:hover {
+        background-color: #0088CC;
+        color: white;
+        cursor: pointer;
+      }
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// clear

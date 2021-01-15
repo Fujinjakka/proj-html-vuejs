@@ -1,45 +1,125 @@
 #footer_top {
   height: 360px;
   background-color: $footer_top_color;
+  color: $footer_top_text;
   #footer_container {
     align-items: flex-start;
     padding-top: 50px;
+    h3 {
+      text-transform: uppercase;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
     #footer_top_left {
       width: 35%;
-      background-color: yellow;
+      p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      i {
+        margin-left: 10px;
+      }
     }
-    .footer_top_center {
+    .footer_top_center_left, .footer_top_center_right {
       width: 25%;
-      background-color: blue;
       .footer_img {
         height: 70px;
         width: 70px;
         border-radius: 50%;
-        background-image: url("../img/footerphoto1.jpg");
       }
       #footer_text {
         width: calc(100% - 70px);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 10px;
+        p {
+          font-size: 12px;
+          margin: 0 20px 10px;
+          text-align: justify;
+          text-justify: inter-word;
+          line-height: 20px;
+          &:first-child {
+            color: white;
+          }
+        }
+      }
+    }
+    .footer_top_center_right {
+      margin-left: 10px;
+      .flex {
+        justify-content: center;
+        align-items: flex-start;;
+        i {
+          color: $footer_bot_color_blue;
+        }
+        p {
+          display: inline-block;
+          font-size: 14px;
+          margin-right: 20px;
+          color: white;
+        }
+        span {
+          color: $footer_bot_color_blue;
+        }
+      }
+      .date {
+        margin: 20px 10px;
+        font-size: 12px;
       }
     }
     #footer_top_right {
       width: 15%;
-      background-color: pink;
+      .footer_category {
+        flex-wrap: wrap;
+        .categories {
+          color: white;
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: 900;
+          background-color: black;
+          border-radius: 5px;
+          padding: 7px;
+          margin: 5px 5px;
+          line-height: 10px;
+        }
+      }
     }
   }
+}
+#footer_img_1 {
+  background-image: $footer_img_1;
+}
+#footer_img_2 {
+  background-image: $footer_img_2;
 }
 
 
 
 #footer_bot {
   height: 97px;
+  color: #777777;
+  font-size: 12px;
   background-color: $footer_bot_color;
   #footer_logo {
     height: 33px;
-    width: 120px;
-    background-image: url("../img/footerlogo.png");
+    width: 73px;
+    margin-right: 30px;
+    background-image: $footer_logo;
     background-size: cover;
+  }
+  ul {
+    @include clearList;
+    margin-left: auto;
+    a {
+      color: $footer_top_text;
+      margin-right: 10px;
+      font-size: 12px;
+      i {
+        margin-right: 5px;
+      }
+    }
   }
 }
